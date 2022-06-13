@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stichting Satang Jabang</title>
+    <link href="Donaterurs.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="./images/LogoTekst.png">
+            <img style="margin-left: 220px; width: 200px;" src="./images/Stichting Kafountine.png">
+        </div>
+
+        <div id="banner">
+            <img style width="200px" height="80" src="./images/vlag.jpg" alt="Senegal">
+        </div>
+
+        <div id="nav">
+            <a href="Start.html">Home</a> |
+            <a href="StichtingSatangJabang.html">Stichting Satang Jabang</a> |
+            <a href="Nieuws.html">Nieuws</a> |
+            <div class="dropdown">
+                <a href="#">Doneren</a> |
+                <div class="dropdown-content">
+                    <a href="EenmaligDoneren.html">Eenmalig Doneren</a>
+                    <a href="NotaDonatie.html">Notariële Donatie</a>
+                </div>
+            </div>
+            <a href="Donateurs.html">Donateurs</a> |
+            <a href="Contact.html">Contact</a>
+        </div>
+
+        <div id="main">
+            <div id="choicebox">
+                <select id="options" onchange="optionCheck()">
+                    <option value="0">Kies een optie:</option>
+                    <option value="1">Satang Jabang Video</option>
+                    <option value="2">Satang Jabang Video 2</option>
+                </select>
+                <div id="1" style="position:absolute;height:200px;width:300px;top:40px;right:130px;border:1px;visibility:hidden;">
+                    <video width="300px" height="200px" controls>
+                        <source src="./images/SatangVideo1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="2" style="position:absolute;height:200px;width:300px;top:40px;right:130px;border:1px;visibility:hidden;">
+                    <video width="300px" height="200px" controls>
+                        <source src="./images/SatangVideo2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div id="textbox">
+                <br>
+                Sponsor 1
+                <br>
+                <img src="./images/heineken.jpg" style="width: 70px; left: 70%; position: absolute;">
+                <h1>HEINEKEN</h1>
+                <br>
+                <hr>
+                <br>
+                Sponsor 2
+                <br>
+                <br>
+                <img src="./images/Apple.jpg" style="width: 70px; left: 70%; position: absolute;">
+                <h1>APPLE</h1>
+                <hr>
+                <br>
+                Sponsor 3
+                <br>
+                <img src="./images/befair.jpg" style="width: 70px; left: 70%; position: absolute;">
+                <h1>Be Fair</h1>
+            </div>
+        </div>
+
+        <div id="footer">
+            <a class="vak1">
+                <u><b>Adres van de Stichting</b></u><br>
+                Rijndijkstraat 93<br>
+                2313NJ Leiden<br>
+                Nederland
+            </a>
+            <a class="vak2">
+                <u><b>Adres van Satang Jabang</b></u><br>
+                Senegal
+            </a>
+            <a class="vak3">
+                <u><b>Credits</b></u><br>
+                GO0E-SWD1<br>
+                Rik Zuidam
+            </a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function optionCheck() {
+            var option = document.getElementById("options").value;
+            if (option == "0") {
+                document.getElementById("1").style.visibility = "hidden";
+            }
+            if (option == "0") {
+                document.getElementById("2").style.visibility = "hidden";
+            }
+            if (option == "1") {
+                document.getElementById("1").style.visibility = "visible";
+            }
+            if (option == "1") {
+                document.getElementById("2").style.visibility = "hidden";
+            }
+            if (option == "2") {
+                document.getElementById("1").style.visibility = "hidden";
+            }
+            if (option == "2") {
+                document.getElementById("2").style.visibility = "visible";
+            }
+        }
+    </script>
+    <script>
+        var imgArray =
+
+            [
+
+                'images/Foto1.JPG',
+
+                'images/Foto2.JPG',
+
+                'images/Foto3.JPG',
+
+                'images/Foto4.JPG',
+
+            ],
+
+            idx = 0,
+
+            imgDuration = 2500;
+
+
+
+        function slideShow(whichDiv) {
+
+            let dv = document.getElementById(whichDiv);
+
+
+
+            dv.style.backgroundImage = "url(" + imgArray[idx] + ")";
+
+
+
+            idx++;
+
+            if (idx == imgArray.length) {
+
+                idx = 0;
+
+            }
+
+
+
+            setTimeout(slideShow, imgDuration, whichDiv);
+
+        }
+
+
+
+        slideShow('main'); // start de slideshow, die herhaalt zichzelf 
+
+
+
+    </script>
+</body>
+
+</html>
